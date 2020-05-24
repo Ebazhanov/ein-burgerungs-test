@@ -2,5 +2,5 @@
 - hier Religionsfreiheit gilt.
 - die Menschen Steuern zahlen.
 - die Menschen das Wahlrecht haben.
-- **hier Meinungsfreiheit gilt.**
+- hier Meinungsfreiheit gilt. <<<= richtige Antwort
 
