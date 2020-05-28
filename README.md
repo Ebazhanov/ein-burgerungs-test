@@ -3,5 +3,5 @@
 - [Aufgaben 1 von 310](https://github.com/Ebazhanov/ein-burgerungs-test/blob/master/aufgaben.md)
 
 # TODO
-- [ ] add all the questions
+- [ ] add the rest of the questions
 - [ ] improve design
