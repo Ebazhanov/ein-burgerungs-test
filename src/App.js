@@ -1,38 +1,35 @@
-import React, {Component} from 'react';
-import quizQuestions from './api/quizQuestions';
-import Quiz from './components/Quiz';
-import Result from './components/Result';
-import logo from './svg/logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import quizQuestions from "./api/quizQuestions";
+import Quiz from "./components/Quiz";
+import Result from "./components/Result";
+import logo from "./svg/logo.svg";
+import "./App.css";
 
-class App extends Component {
-    constructor(props) {
-        super(props);
+/*class App extends Component {
+        //this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    }*/
 
-        this.state = {
-            counter: 0,
-            questionId: 1,
-            question: '',
-            answerOptions: [],
-            answer: '',
-            answersCount: {},
-            result: ''
-        };
+const App = () => {
+    const [counter, setCounter] = useState(0);
+    const [questionId, setQuestionId] = useState(1);
+    const [question, setQuestion] = useState("");
+    const [result, setResult] = useState("");
+    const [answer, setAnswer] = useState('');
+    const [answerOptions, setAnswerOptions] = useState([]);
+    const [answersCount, setAnswerCount] = useState({});
+    const [state, setState] = useState(0);
 
-        this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         const shuffledAnswerOptions = quizQuestions.map(question =>
-            this.shuffleArray(question.answers)
+            shuffleArray(question.answers)
         );
-        this.setState({
+        setState({
             question: quizQuestions[0].question,
             answerOptions: shuffledAnswerOptions[0]
         });
-    }
+    }, []);
 
-    shuffleArray(array) {
+    const shuffleArray = (array) => {
         var currentIndex = array.length,
             temporaryValue,
             randomIndex;
@@ -48,88 +45,91 @@ class App extends Component {
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
         }
-
         return array;
-    }
+    };
 
-    handleAnswerSelected(event) {
-        this.setUserAnswer(event.currentTarget.value);
-
-        if (this.state.questionId < quizQuestions.length) {
-            setTimeout(() => this.setNextQuestion(), 300);
+    const handleAnswerSelected = (event) => {
+        setUserAnswer(event.currentTarget.value);
+        if (questionId < quizQuestions.length) {
+            setTimeout(() => setNextQuestion(), 300);
         } else {
-            setTimeout(() => this.setResults(this.getResults()), 300);
+            setTimeout(() => setResults(getResults()), 300);
         }
-    }
+    };
 
-    setUserAnswer(answer) {
-        this.setState((state, props) => ({
+    const setUserAnswer = (answer) => {
+        setState((state, props) => ({
             answersCount: {
                 ...state.answersCount,
                 [answer]: (state.answersCount[answer] || 0) + 1
             },
             answer: answer
         }));
-    }
+    };
 
-    setNextQuestion() {
-        const counter = this.state.counter + 1;
-        const questionId = this.state.questionId + 1;
 
-        this.setState({
+
+    const setNextQuestion = () => {
+        const counter = counter + 1;
+        const questionId = questionId + 1;
+
+        setState({
             counter: counter,
             questionId: questionId,
             question: quizQuestions[counter].question,
             answerOptions: quizQuestions[counter].answers,
             answer: ''
         });
-    }
+    };
 
-    getResults() {
-        const answersCount = this.state.answersCount;
+    const getResults = () => {
+        const answersCount = state.answersCount;
         const answersCountKeys = Object.keys(answersCount);
         const answersCountValues = answersCountKeys.map(key => answersCount[key]);
         const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
         return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
-    }
+    };
 
-    setResults(result) {
+    const setResults = (result) => {
         if (result.length === 1) {
-            this.setState({result: result[0]});
+            setState({ result: result[0] });
         } else {
-            this.setState({result: 'Undetermined'});
+            setState({ result: "Undetermined" });
         }
-    }
+    };
 
-    renderQuiz() {
+    const renderQuiz = () => {
         return (
             <Quiz
-                answer={this.state.answer}
-                answerOptions={this.state.answerOptions}
-                questionId={this.state.questionId}
-                question={this.state.question}
+                answer={answer}
+                answerOptions={state.answerOptions}
+                questionId={state.questionId}
+                question={state.question}
                 questionTotal={quizQuestions.length}
-                onAnswerSelected={this.handleAnswerSelected}
+                onAnswerSelected={handleAnswerSelected}
             />
         );
-    }
+    };
 
-    renderResult() {
-        return <Result quizResult={this.state.result}/>;
-    }
+    const renderResult = () => {
+        return <Result quizResult={state.result} />;
+    };
 
-    render() {
-        return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Ein bürgerungs test</h2>
-                </div>
-                {this.state.result ? this.renderResult() : this.renderQuiz()}
+
+    console.log("result: ", result);
+    console.log("renderResult: ", renderResult());
+    console.log("renderQuiz: ", renderQuiz());
+    console.log("answerOptions", answerOptions);
+
+    return (
+        <div className="App">
+            <div className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h2>Ein bürgerungs test</h2>
             </div>
-        );
-    }
-}
+            {state.result ? renderResult() : renderQuiz()}
+        </div>
+    );
+};
 
 export default App;
