@@ -14,7 +14,7 @@ const App = () => {
     const [questionId, setQuestionId] = useState(1);
     const [question, setQuestion] = useState("");
     const [result, setResult] = useState("");
-    const [answer, setAnswer] = useState('');
+    const [answer, setAnswer] = useState("");
     const [answerOptions, setAnswerOptions] = useState([]);
     const [answersCount, setAnswerCount] = useState({});
     const [state, setState] = useState(0);
@@ -29,7 +29,7 @@ const App = () => {
         });
     }, []);
 
-    const shuffleArray = (array) => {
+    const shuffleArray = array => {
         var currentIndex = array.length,
             temporaryValue,
             randomIndex;
@@ -48,7 +48,7 @@ const App = () => {
         return array;
     };
 
-    const handleAnswerSelected = (event) => {
+    const handleAnswerSelected = event => {
         setUserAnswer(event.currentTarget.value);
         if (questionId < quizQuestions.length) {
             setTimeout(() => setNextQuestion(), 300);
@@ -57,17 +57,15 @@ const App = () => {
         }
     };
 
-    const setUserAnswer = (answer) => {
+    const setUserAnswer = answer => {
         setState((state, props) => ({
             answersCount: {
-                ...state.answersCount,
-                [answer]: (state.answersCount[answer] || 0) + 1
+                ...answersCount,
+                [answer]: (answersCount[answer] || 0) + 1
             },
             answer: answer
         }));
     };
-
-
 
     const setNextQuestion = () => {
         const counter = counter + 1;
@@ -78,19 +76,19 @@ const App = () => {
             questionId: questionId,
             question: quizQuestions[counter].question,
             answerOptions: quizQuestions[counter].answers,
-            answer: ''
+            answer: ""
         });
     };
 
     const getResults = () => {
-        const answersCount = state.answersCount;
+        const answersCount = answersCount;
         const answersCountKeys = Object.keys(answersCount);
         const answersCountValues = answersCountKeys.map(key => answersCount[key]);
         const maxAnswerCount = Math.max.apply(null, answersCountValues);
         return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
     };
 
-    const setResults = (result) => {
+    const setResults = result => {
         if (result.length === 1) {
             setState({ result: result[0] });
         } else {
@@ -98,12 +96,14 @@ const App = () => {
         }
     };
 
+    //console.log("state.question", state.question)
+
     const renderQuiz = () => {
         return (
             <Quiz
-                answer={answer}
-                answerOptions={state.answerOptions}
-                questionId={state.questionId}
+                answer='answer'
+                answerOptions={answerOptions}
+                questionId={questionId}
                 question={state.question}
                 questionTotal={quizQuestions.length}
                 onAnswerSelected={handleAnswerSelected}
@@ -112,9 +112,8 @@ const App = () => {
     };
 
     const renderResult = () => {
-        return <Result quizResult={state.result} />;
+        return <Result quizResult={result} />;
     };
-
 
     console.log("result: ", result);
     console.log("renderResult: ", renderResult());
