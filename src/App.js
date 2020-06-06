@@ -5,10 +5,6 @@ import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
 
-/*class App extends Component {
-        //this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-    }*/
-
 const App = () => {
     const [counter, setCounter] = useState(0);
     const [questionId, setQuestionId] = useState(1);
@@ -101,7 +97,7 @@ const App = () => {
     const renderQuiz = () => {
         return (
             <Quiz
-                answer='answer'
+                answer={answer}
                 answerOptions={answerOptions}
                 questionId={questionId}
                 question={state.question}
