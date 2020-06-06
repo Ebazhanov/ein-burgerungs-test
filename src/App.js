@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -66,14 +66,11 @@ const App = () => {
     const setNextQuestion = () => {
         const counter = counter + 1;
         const questionId = questionId + 1;
-
-        setState({
-            counter: counter,
-            questionId: questionId,
-            question: quizQuestions[counter].question,
-            answerOptions: quizQuestions[counter].answers,
-            answer: ""
-        });
+        setCounter(counter);
+        setQuestionId(questionId);
+        setQuestion(quizQuestions[counter].question);
+        setAnswerOptions(quizQuestions[counter].answers);
+        setAnswer("");
     };
 
     const getResults = () => {
@@ -86,9 +83,9 @@ const App = () => {
 
     const setResults = result => {
         if (result.length === 1) {
-            setState({ result: result[0] });
+            setResult(result[0]);
         } else {
-            setState({ result: "Undetermined" });
+            setResult("Undetermined");
         }
     };
 
@@ -108,7 +105,7 @@ const App = () => {
     };
 
     const renderResult = () => {
-        return <Result quizResult={result} />;
+        return <Result quizResult={result}/>;
     };
 
     console.log("result: ", result);
@@ -119,7 +116,7 @@ const App = () => {
     return (
         <div className="App">
             <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo"/>
                 <h2>Ein bürgerungs test</h2>
             </div>
             {state.result ? renderResult() : renderQuiz()}
