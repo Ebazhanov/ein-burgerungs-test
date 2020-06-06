@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -23,19 +23,22 @@ const App = () => {
             question: quizQuestions[0].question,
             answerOptions: shuffledAnswerOptions[0]
         });
+
+        //return () => {
+        //  setQuestion(quizQuestions[0].question);
+        //  setAnswerOptions(shuffledAnswerOptions[0]);
+        //};
     }, []);
 
     const shuffleArray = array => {
         var currentIndex = array.length,
             temporaryValue,
             randomIndex;
-
         // While there remain elements to shuffle...
         while (0 !== currentIndex) {
             // Pick a remaining element...
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-
             // And swap it with the current element.
             temporaryValue = array[currentIndex];
             array[currentIndex] = array[randomIndex];
@@ -54,18 +57,12 @@ const App = () => {
     };
 
     const setUserAnswer = answer => {
-        setState((state, props) => ({
-            answersCount: {
-                ...answersCount,
-                [answer]: (answersCount[answer] || 0) + 1
-            },
-            answer: answer
-        }));
+        setAnswerCount((answersCount[answer] || 0) + 1)
     };
 
     const setNextQuestion = () => {
-        const counter = counter + 1;
-        const questionId = questionId + 1;
+        const counter = setCounter(counter + 1);
+        const questionId = setQuestionId(questionId + 1);
         setCounter(counter);
         setQuestionId(questionId);
         setQuestion(quizQuestions[counter].question);
@@ -89,8 +86,6 @@ const App = () => {
         }
     };
 
-    //console.log("state.question", state.question)
-
     const renderQuiz = () => {
         return (
             <Quiz
@@ -105,7 +100,7 @@ const App = () => {
     };
 
     const renderResult = () => {
-        return <Result quizResult={result}/>;
+        return <Result quizResult={result} />;
     };
 
     console.log("result: ", result);
@@ -116,10 +111,10 @@ const App = () => {
     return (
         <div className="App">
             <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
+                <img src={logo} className="App-logo" alt="logo" />
                 <h2>Ein bürgerungs test</h2>
             </div>
-            {state.result ? renderResult() : renderQuiz()}
+            {result ? renderResult() : renderQuiz()}
         </div>
     );
 };
