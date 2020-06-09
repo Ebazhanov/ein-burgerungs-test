@@ -53,21 +53,21 @@ const App = () => {
     };
 
     const setNextQuestion = () => {
-        const counter = setCounter(counter + 1);
-        const questionId = setQuestionId(questionId + 1);
-        setCounter(counter);
-        setQuestionId(questionId);
+        const getCounter = setCounter(counter + 1);
+        const getQuestionId = setQuestionId(questionId + 1);
+        setCounter(getCounter);
+        setQuestionId(getQuestionId);
         setQuestion(quizQuestions[counter].question);
         setAnswerOptions(quizQuestions[counter].answers);
         setAnswer("");
     };
 
     const getResults = () => {
-        const answersCount = answersCount;
-        const answersCountKeys = Object.keys(answersCount);
-        const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+        const getAnswersCount = answersCount;
+        const answersCountKeys = Object.keys(getAnswersCount);
+        const answersCountValues = answersCountKeys.map(key => getAnswersCount[key]);
         const maxAnswerCount = Math.max.apply(null, answersCountValues);
-        return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+        return answersCountKeys.filter(key => getAnswersCount[key] === maxAnswerCount);
     };
 
     const setResults = result => {
