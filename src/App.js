@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -8,26 +8,18 @@ import "./App.css";
 const App = () => {
     const [counter, setCounter] = useState(0);
     const [questionId, setQuestionId] = useState(1);
-    const [question, setQuestion] = useState("");
-    const [result, setResult] = useState("");
-    const [answer, setAnswer] = useState("");
+    const [question, setQuestion] = useState('');
+    const [result, setResult] = useState('');
+    const [answer, setAnswer] = useState('');
     const [answerOptions, setAnswerOptions] = useState([]);
     const [answersCount, setAnswerCount] = useState({});
-    const [state, setState] = useState(0);
 
     useEffect(() => {
         const shuffledAnswerOptions = quizQuestions.map(question =>
             shuffleArray(question.answers)
         );
-        setState({
-            question: quizQuestions[0].question,
-            answerOptions: shuffledAnswerOptions[0]
-        });
-
-        //return () => {
-        //  setQuestion(quizQuestions[0].question);
-        //  setAnswerOptions(shuffledAnswerOptions[0]);
-        //};
+        setQuestion(quizQuestions[0].question);
+        setAnswerOptions(shuffledAnswerOptions[0]);
     }, []);
 
     const shuffleArray = array => {
@@ -57,7 +49,7 @@ const App = () => {
     };
 
     const setUserAnswer = answer => {
-        setAnswerCount((answersCount[answer] || 0) + 1)
+        setAnswerCount((answersCount[answer] || 0) + 1);
     };
 
     const setNextQuestion = () => {
@@ -92,7 +84,7 @@ const App = () => {
                 answer={answer}
                 answerOptions={answerOptions}
                 questionId={questionId}
-                question={state.question}
+                question={question}
                 questionTotal={quizQuestions.length}
                 onAnswerSelected={handleAnswerSelected}
             />
@@ -100,18 +92,13 @@ const App = () => {
     };
 
     const renderResult = () => {
-        return <Result quizResult={result} />;
+        return <Result quizResult={result}/>;
     };
-
-    console.log("result: ", result);
-    console.log("renderResult: ", renderResult());
-    console.log("renderQuiz: ", renderQuiz());
-    console.log("answerOptions", answerOptions);
 
     return (
         <div className="App">
             <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo"/>
                 <h2>Ein bürgerungs test</h2>
             </div>
             {result ? renderResult() : renderQuiz()}

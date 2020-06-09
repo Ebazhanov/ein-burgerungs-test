@@ -23,14 +23,15 @@ const Quiz = ({answer, questionId, onAnswerSelected, questionTotal, question, an
         <CSSTransition
             className="container"
             component="div"
-            //transitionName="fade"
-            //transitionEnterTimeout={800}
-            //transitionLeaveTimeout={500}
-            //transitionAppear
-            //transitionAppearTimeout={500}
+            transitionName="fade"
+            transitionEnterTimeout={800}
+            transitionLeaveTimeout={500}
+            transitionAppear
+            transitionAppearTimeout={500}
         >
             <div key={questionId}>
-                <QuestionCount counter={questionId} total={questionTotal}/>
+                <QuestionCount counter={questionId}
+                               total={questionTotal}/>
                 <Question content={question}/>
                 <ul className="answerOptions">
                     {answerOptions.map(renderAnswerOptions)}
