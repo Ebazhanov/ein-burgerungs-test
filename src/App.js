@@ -53,8 +53,8 @@ const App = () => {
     };
 
     const setNextQuestion = () => {
-        const getCounter = setCounter(counter + 1);
-        const getQuestionId = setQuestionId(questionId + 1);
+        const getCounter = counter + 1;
+        const getQuestionId = questionId + 1;
         setCounter(getCounter);
         setQuestionId(getQuestionId);
         setQuestion(quizQuestions[counter].question);
