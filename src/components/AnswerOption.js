@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function AnswerOption(props) {
+const AnswerOption = ({answerType, answer, answerContent, onAnswerSelected}) => {
     return (
         <li className="answerOption">
             <input
                 type="radio"
                 className="radioCustomButton"
                 name="radioGroup"
-                checked={props.answerType === props.answer}
-                id={props.answerType}
-                value={props.answerType}
-                disabled={props.answer}
-                onChange={props.onAnswerSelected}
+                checked={answerType === answer}
+                id={answerType}
+                value={answerType}
+                disabled={answer}
+                onChange={onAnswerSelected}
             />
-            <label className="radioCustomLabel" htmlFor={props.answerType}>
-                {props.answerContent}
+            <label className="radioCustomLabel" htmlFor={answerType}>
+                {answerContent}
             </label>
         </li>
     );

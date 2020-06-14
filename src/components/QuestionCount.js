@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function QuestionCount(props) {
+const QuestionCount = ({counter, total}) => {
     return (
         <div className="questionCount">
-            Question <span>{props.counter}</span> of <span>{props.total}</span>
+            Aufgabe <span>{counter}</span> von <span>{total}</span>
         </div>
     );
 }

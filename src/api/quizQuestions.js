@@ -1,6 +1,6 @@
 var quizQuestions = [
     {
-        question: "Aufgabe 1. In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ... - hier Religionsfreiheit gilt.",
+        question: "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ... - hier Religionsfreiheit gilt.",
         answers: [
             {
                 type: "You level is A1",
@@ -38,6 +38,27 @@ var quizQuestions = [
             {
                 type: "You level is B2",
                 content: "Sprachunterricht teilnimmt."
+            }
+        ]
+    },
+    {
+        question: "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?",
+        answers: [
+            {
+                type: "You level is A1",
+                content: "Alle Einwohner / Einwohnerinnen und der Staat müssen sich die Gesetze halten."
+            },
+            {
+                type: "You level is A2",
+                content: "Der Staat muss sich nicht an die Gesetze halten."
+            },
+            {
+                type: "You level is B1",
+                content: "Nur Deutsche müssen die Gesetze befolgen."
+            },
+            {
+                type: "You level is B2",
+                content: "Die Gerichte machen die Gesetze."
             }
         ]
     }
