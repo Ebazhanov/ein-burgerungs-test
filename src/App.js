@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -53,13 +53,9 @@ const App = () => {
     };
 
     const setNextQuestion = () => {
-        //const counter = counter + 1;
-        //const questionId = questionId + 1;
-         setCounter(counter+1);
-         setQuestionId(questionId+1);
-        // setQuestion(quizQuestions[counter].question);
-        // setAnswerOptions(quizQuestions[counter].answers);
-         setAnswer("");
+        setCounter(counter + 1);
+        setQuestionId(questionId + 1);
+        setAnswer("");
     };
 
     const getResults = () => {
@@ -93,13 +89,13 @@ const App = () => {
     };
 
     const renderResult = () => {
-        return <Result quizResult={result} />;
+        return <Result quizResult={result}/>;
     };
 
     return (
         <div className="App">
             <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo"/>
                 <h2>Ein bürgerungs test</h2>
             </div>
             {result ? renderResult() : renderQuiz()}
