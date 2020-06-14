@@ -3,9 +3,11 @@
 - [Aufgaben 1 von 310](https://github.com/Ebazhanov/ein-burgerungs-test/blob/master/aufgaben.md)
 
 # TODO
-- [ ] convert React Class Components to Functional Components with React Hooks
-- [ ] add the rest of the questions ...310
+- [x] convert React Class Components to Functional Components with React Hooks
+- [ ] add css animation for labels
+- [ ] fix results page
 - [ ] improve design
+- [ ] add the rest of the questions ...310
 
 Reference:
 - [see it on codesandbox.io](https://codesandbox.io/s/ein-burger-test-w3eii?file=/src/App.js)
