@@ -3,7 +3,7 @@
 - [Aufgaben 1 von 310](https://github.com/Ebazhanov/ein-burgerungs-test/blob/master/aufgaben.md)
 
 # TODO
-- [x] convert React Class Components to Functional Components with React Hooks
+- [x] convert React Class Components to Functional Components with React Hooks [PR](https://github.com/Ebazhanov/ein-burgerungs-test/pull/2/files)
 - [ ] add css animation for labels
 - [ ] fix results page
 - [ ] improve design
