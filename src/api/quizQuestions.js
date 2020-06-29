@@ -7,15 +7,15 @@ var quizQuestions = [
                 content: "hier Religionsfreiheit gilt"
             },
             {
-                type: "You level is A2",
+                type: "You level is A1",
                 content: "die Menschen Steuern zahlen."
             },
             {
-                type: "You level is B1",
+                type: "You level is A1",
                 content: "die Menschen das Wahlrecht haben."
             },
             {
-                type: "You level is B2",
+                type: "You level is A1",
                 content: "hier Meinungsfreiheit gilt. <<<= richtige Antwort"
             }
         ]
@@ -28,15 +28,15 @@ var quizQuestions = [
                 content: "Geschichtsunterricht teilnimmt."
             },
             {
-                type: "You level is A2",
+                type: "You level is A1",
                 content: "Religionsunterricht teilnimmt."
             },
             {
-                type: "You level is B1",
+                type: "You level is A1",
                 content: "Politikunterricht teilnimmt."
             },
             {
-                type: "You level is B2",
+                type: "You level is A1",
                 content: "Sprachunterricht teilnimmt."
             }
         ]
@@ -49,15 +49,15 @@ var quizQuestions = [
                 content: "Alle Einwohner / Einwohnerinnen und der Staat müssen sich die Gesetze halten."
             },
             {
-                type: "You level is A2",
+                type: "You level is A1",
                 content: "Der Staat muss sich nicht an die Gesetze halten."
             },
             {
-                type: "You level is B1",
+                type: "You level is A1",
                 content: "Nur Deutsche müssen die Gesetze befolgen."
             },
             {
-                type: "You level is B2",
+                type: "You level is A1",
                 content: "Die Gerichte machen die Gesetze."
             }
         ]

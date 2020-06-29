@@ -5,7 +5,8 @@ import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
 
-const App = () => {
+export default function App() {
+
     const [counter, setCounter] = useState(0);
     const [questionId, setQuestionId] = useState(1);
     const [question, setQuestion] = useState("");
@@ -49,7 +50,7 @@ const App = () => {
     };
 
     const setUserAnswer = answer => {
-        setAnswerCount((answersCount[answer] || 0) + 1);
+        setAnswerCount({...answersCount, [answer]: (answersCount[answer] || 0) + 1});
     };
 
     const setNextQuestion = () => {
@@ -59,8 +60,7 @@ const App = () => {
     };
 
     const getResults = () => {
-        //const answersCount = answersCount;
-        setAnswer(answersCount[answer]);
+        setAnswerCount(answersCount);
         const answersCountKeys = Object.keys(answersCount);
         const answersCountValues = answersCountKeys.map(key => answersCount[key]);
         const maxAnswerCount = Math.max.apply(null, answersCountValues);
@@ -102,5 +102,3 @@ const App = () => {
         </div>
     );
 };
-
-export default App;
