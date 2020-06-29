@@ -4,10 +4,10 @@
 
 # TODO
 - [x] convert React Class Components to Functional Components with React Hooks [PR](https://github.com/Ebazhanov/ein-burgerungs-test/pull/2/files)
+- [x] fix results [logic](https://github.com/Ebazhanov/ein-burgerungs-test/pull/3)
 - [ ] add css animation for labels
-- [ ] fix results page
-- [ ] improve design
 - [ ] add the rest of the questions ...310
+- [ ] improve design
 
 Reference:
 - [see it on codesandbox.io](https://codesandbox.io/s/ein-burger-test-w3eii?file=/src/App.js)
