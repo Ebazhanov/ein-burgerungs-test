@@ -10,7 +10,6 @@
 - [ ] improve design
 
 Reference:
-- [see it on codesandbox.io](https://codesandbox.io/s/ein-burger-test-w3eii?file=/src/App.js)
 - [original idea](https://mitchgavan.com/react-quiz/)
 
 Usage:
