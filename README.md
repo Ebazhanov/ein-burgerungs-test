@@ -1,18 +1,16 @@
 # [Einbürgerungstest](http://oet.bamf.de/pls/oetut/f?p=514:1:0::NO)
 
-- [Aufgaben 1 von 310](https://github.com/Ebazhanov/ein-burgerungs-test/blob/master/aufgaben.md)
+- Demo: [https://burger-test.netlify.app/](https://burger-test.netlify.app/)
 
 # TODO
 - [x] convert React Class Components to Functional Components with React Hooks [PR](https://github.com/Ebazhanov/ein-burgerungs-test/pull/2/files)
 - [x] fix results [logic](https://github.com/Ebazhanov/ein-burgerungs-test/pull/3)
-- [ ] add css animation for labels
+- [x] add css animation for labels
+- [ ] modify the logic which responsible for the 'final result'
 - [ ] add the rest of the questions ...310
-- [ ] improve design
-
-Reference:
-- [original idea](https://mitchgavan.com/react-quiz/)
 
 Usage:
 - `$ yarn start`
 
-Demo: [https://burger-test.netlify.app/](https://burger-test.netlify.app/)
+Reference:
+- [original idea](https://mitchgavan.com/react-quiz/)

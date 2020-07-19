@@ -3,19 +3,19 @@ var quizQuestions = [
         question: "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ... - hier Religionsfreiheit gilt.",
         answers: [
             {
-                type: "You level is A1",
+                type: "falsche Antwort",
                 content: "hier Religionsfreiheit gilt"
             },
             {
-                type: "You level is A2",
+                type: "falsche Antwort",
                 content: "die Menschen Steuern zahlen."
             },
             {
-                type: "You level is A3",
+                type: "falsche Antwort",
                 content: "die Menschen das Wahlrecht haben."
             },
             {
-                type: "You level is A4",
+                type: "richtige Antwort",
                 content: "hier Meinungsfreiheit gilt."
             }
         ]
@@ -24,19 +24,19 @@ var quizQuestions = [
         question: "In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am ...",
         answers: [
             {
-                type: "You level is A1",
+                type: "falsche Antwort",
                 content: "Geschichtsunterricht teilnimmt."
             },
             {
-                type: "You level is A2",
+                type: "richtige Antwort",
                 content: "Religionsunterricht teilnimmt."
             },
             {
-                type: "You level is A3",
+                type: "falsche Antwort",
                 content: "Politikunterricht teilnimmt."
             },
             {
-                type: "You level is A4",
+                type: "falsche Antwort",
                 content: "Sprachunterricht teilnimmt."
             }
         ]
@@ -45,19 +45,19 @@ var quizQuestions = [
         question: "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?",
         answers: [
             {
-                type: "You level is A1",
+                type: "richtige Antwort",
                 content: "Alle Einwohner / Einwohnerinnen und der Staat müssen sich die Gesetze halten."
             },
             {
-                type: "You level is A2",
+                type: "falsche Antwort",
                 content: "Der Staat muss sich nicht an die Gesetze halten."
             },
             {
-                type: "You level is A3",
+                type: "falsche Antwort",
                 content: "Nur Deutsche müssen die Gesetze befolgen."
             },
             {
-                type: "You level is A4",
+                type: "falsche Antwort",
                 content: "Die Gerichte machen die Gesetze."
             }
         ]
