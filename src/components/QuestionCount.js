@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const QuestionCount = ({counter, total}) => {
+export default function QuestionCount({counter, total}) {
     return (
         <div className="questionCount">
             Aufgabe <span>{counter}</span> von <span>{total}</span>
@@ -13,5 +13,3 @@ QuestionCount.propTypes = {
     counter: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired
 };
-
-export default QuestionCount;

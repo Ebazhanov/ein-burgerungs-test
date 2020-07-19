@@ -16,7 +16,7 @@ var quizQuestions = [
             },
             {
                 type: "You level is A4",
-                content: "hier Meinungsfreiheit gilt. <<<= richtige Antwort"
+                content: "hier Meinungsfreiheit gilt."
             }
         ]
     },

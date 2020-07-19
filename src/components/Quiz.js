@@ -4,7 +4,7 @@ import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
 import AnswerOption from '../components/AnswerOption';
 
-const Quiz = ({answer, questionId, onAnswerSelected, questionTotal, question, answerOptions}) => {
+export default function Quiz({answer, questionId, onAnswerSelected, questionTotal, question, answerOptions}) {
     function renderAnswerOptions(key) {
         return (
             <AnswerOption
@@ -38,5 +38,3 @@ Quiz.propTypes = {
     questionTotal: PropTypes.number.isRequired,
     onAnswerSelected: PropTypes.func.isRequired
 };
-
-export default Quiz;

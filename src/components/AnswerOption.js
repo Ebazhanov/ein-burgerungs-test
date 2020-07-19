@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AnswerOption = ({answerType, answer, answerContent, onAnswerSelected}) => {
+/**
+ * This component consists of a list item with a radio button and label.
+ * the checked property is a comparison statement.
+ * This value will be a boolean (true or false) based on whether the answer selected is equal to the answer option type.
+ * */
+export default function AnswerOption({answerType, answer, answerContent, onAnswerSelected}) {
     return (
         <li className="answerOption">
             <input
@@ -27,5 +32,3 @@ AnswerOption.propTypes = {
     answer: PropTypes.string.isRequired,
     onAnswerSelected: PropTypes.func.isRequired
 };
-
-export default AnswerOption;

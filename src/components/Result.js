@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Result = ({quizResult}) => {
+export default function Result({quizResult}) {
     return (
         <div className="container result">
             -> <strong>{quizResult}</strong>!
@@ -12,5 +12,3 @@ const Result = ({quizResult}) => {
 Result.propTypes = {
     quizResult: PropTypes.string.isRequired
 };
-
-export default Result;

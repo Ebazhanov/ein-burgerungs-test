@@ -49,16 +49,40 @@ export default function App() {
         }
     };
 
+    /**
+     * We’re setting the answer based on the user’s selection, which is the first
+     * instance of changing state based on user actions. The value being passed
+     * in as the answer parameter on line 1, is the value of the selected answer.
+     * */
     const setUserAnswer = answer => {
+        /**
+         * This is so we can access the previous state, which will be passed into the
+         * function as the first parameter. setAnswerCount is the primary method used to
+         * trigger UI updates from event handlers and server request callbacks.
+         * In React we should treat state as if it is unable to be changed (immutable).
+         * This is why we’re creating a new object. This object has the original
+         * properties of answersCount (through the use of the spread syntax)
+         * merged with the new answerCount value. We have now updated the state without mutating it directly.
+         * */
         setAnswerCount({...answersCount, [answer]: (answersCount[answer] || 0) + 1});
         setAnswer(answer);
     };
 
+    /**
+     * this will update our state to display the next question
+     * */
     const setNextQuestion = () => {
+        /**
+         * Here we increment the counter and questionId state, by first creating the variables,
+         * then assigning them via setCounter. We’re also updating the question and answerOption
+         * state based on the counter variable. We now have a somewhat functional app!
+         * When you select an answer it should update the state accordingly and display the next question.
+         * */
         setCounter(counter + 1);
         setQuestionId(questionId + 1);
         setAnswer("");
     };
+
 
     const getResults = () => {
         setAnswerCount(answersCount);
@@ -68,6 +92,11 @@ export default function App() {
         return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
     };
 
+    /**
+     * This function receives the result from getResults which is an array, and checks to see if that array
+     * has one value. If so we assign that value via setState. If the array has more or less than
+     * one value that means there is no conclusive answer. So we set the result as Undetermined.
+     * */
     const setResults = result => {
         if (result.length === 1) {
             setResult(result[0]);
