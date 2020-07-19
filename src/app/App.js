@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import quizQuestions from "./api/quizQuestions";
-import Quiz from "./components/Quiz";
-import Result from "./components/Result";
-import logo from "./svg/logo.svg";
+import quizQuestions from "../api/quizQuestions";
+import Quiz from "../components/Quiz";
+import Result from "../components/Result";
+import logo from "../asserts/svg/logo.svg";
 import "./App.css";
 
 export default function App() {
@@ -51,6 +51,7 @@ export default function App() {
 
     const setUserAnswer = answer => {
         setAnswerCount({...answersCount, [answer]: (answersCount[answer] || 0) + 1});
+        setAnswer(answer);
     };
 
     const setNextQuestion = () => {
