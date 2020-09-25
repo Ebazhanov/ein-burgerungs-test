@@ -118,6 +118,141 @@
 - [ ] смертная казнь
 - [x] штраф
  	
+#### 11. Wie wird die Verfassung der Bundesrepublic Deutschland genannt?
+- [x] Grundgesetz
+- [ ] Bundesverfassung
+- [ ] Gesetzbuch
+- [ ] Verfassungsvertrag
+
+#### 11. Как называется конституция Федеративной Республики Германии?
+- [x] Основной закон
+- [ ] Федеральная конституция
+- [ ] Код
+- [ ] Конституционный договор
+
+#### 12. Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Is das möglich?
+- [ ] Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.
+- [ ] Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.
+- [x] Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.
+- [ ] Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.
+ 
+#### 12. Партия в Бундестаге Германии хочет отменить свободу печати. Это возможно?
+- [ ] Да, если более половины депутатов Бундестага за.
+- [ ] Да, но две трети депутатов Бундестага должны быть за.
+- [x] Нет, потому что свобода прессы - фундаментальное право. Его нельзя отменить.
+- [ ] Нет, потому что только Федеральный совет может отменить свободу печати.
+ 
+#### 13. Im Parlament steht der Begriff "Opposition" für ...
+- [ ] die regierenden Parteien.
+- [ ] die Fraktion mit den meisten Abgeordneten.
+- [ ] alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.
+- [x] alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.
+
+#### 13. В парламенте термин «оппозиция» означает ...
+- [ ] правящие партии.
+- [ ] группа с наибольшим количеством депутатов Европарламента.
+- [ ] все партии, которые смогли преодолеть 5-процентный порог на последних выборах.
+- [x] все депутаты, не принадлежащие к правящей партии (партиям).
+
+#### 14. Meinungsfreiheit in Deutschland heißt, das ich ... 
+- [ ] auf Flugblättern falsche Tatsachen behaupten darf.
+- [x] meine Meinung in Leserbriefen äußern kann.
+- [ ] Nazi-Symbole tragen darf.
+- [ ] meine Meinung sagen darf, solange ich der Regierung nicht widerspreche.
+
+#### 14. Свобода слова в Германии означает, что я ...
+- [ ] может указывать ложные факты на листовках.
+- [x] могу высказать свое мнение в письмах редактору.
+- [ ] может носить нацистскую символику.
+- [ ] может выражать свое мнение, если я не противоречу правительству.
+ 
+#### 15. Was verbietet das deutsche Grundgesetz?
+- [ ] Militärdienst
+- [x] Zwangsarbeit
+- [ ] freie Berufswahl
+- [ ] Arbeit im Ausland
+
+#### 15. Что запрещает Основной закон Германии?
+- [ ] Военная служба
+- [x] Принудительный труд
+- [ ] свободный выбор работы
+- [ ] Работать за границей
+
+#### 16. Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?
+- [x] bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen
+- [ ] bei Meinungsäußerungen über die Bundesregierung
+- [ ] bei Diskussionen über Religionen
+- [ ] bei Kritik am Staat
+
+#### 16. Когда в Германии ограничивают свободу слова?
+- [x] в публичном распространении ложных сведений о физических лицах.
+- [ ] при выражении мнения о федеральном правительстве
+- [ ] при обсуждении религий
+- [ ] при критике государства 
+ 
+#### 17. Die deutschen Gesetze verbieten ...
+- [ ] Meinungsfreiheit der Einwohner und Einwohnerinnen.
+- [ ] Petitionen der Bürger und Bürgerinnen.
+- [ ] Versammlungsfreiheit der Einwohner und Einwohnerinnen.
+- [x] Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat.
+
+#### 17. Законы Германии запрещают ...
+- [ ] Свобода выражения для жителей.
+- [ ] Обращения граждан.
+- [ ] Свобода собраний жителей.
+- [x] Неравное отношение к гражданам со стороны государства.
+ 
+#### 18. Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert? 
+- [x] die Unantastbarkeit der Menschenwürde
+- [ ] das Recht auf Leben
+- [ ] Religionsfreiheit
+- [ ] Meinungsfreiheit
+	
+#### 18. Какие основные права гарантируются статьей 1 Основного закона Федеративной Республики Германии?
+- [x] неприкосновенность человеческого достоинства
+- [ ] право на жизнь
+- [ ] Свобода религии
+- [ ] Свобода слова 
+ 
+#### 19. Was versteht man unter dem Recht der "Freizügigkeit" in Deutschland?
+- [x] Man darf sich seinen Wohnort selbst aussuchen.
+- [ ] Man kann seinen Beruf wechseln.
+- [ ] Man darf sich für eine andere Religion entscheiden.
+- [ ] Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.
+
+#### 19. Что подразумевается под правом «свободы передвижения» в Германии?
+- [x] Вы можете выбрать собственное место жительства.
+- [ ] Вы можете сменить работу.
+- [ ] Вы можете выбрать другую религию.
+- [ ] На публике можно двигаться только в легкой одежде.
+ 
+#### 20. Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann ...
+- [ ] tolerant.
+- [ ] rechtsstaatlich orientiert.
+- [ ] gesetzestreu.
+- [x] verfassungswidrig.
+ 
+#### 20. Партия в Германии стремится к установлению диктатуры. Тогда она ...
+- [ ] терпимый.
+- [ ] конституционно ориентированный.
+- [ ] законопослушный.
+- [x] неконституционный.
+ 
+ #### 11. 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+ #### 11. 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+ #### 11. 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
  #### 11. 
 - [ ] 
 - [ ] 
